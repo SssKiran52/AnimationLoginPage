@@ -1,0 +1,94 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+#colorBall{
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(75deg,purple,pink,lawngreen,royalblue,lawngreen,pink,purple);
+    background-size: 1800px;
+    background-position: 1800px;
+    position: absolute;
+    left: 41.5%;
+    top: 32%;
+    border-radius: 100%;
+    animation: colorBall 10s 0.5s ease-out infinite reverse both;
+    box-shadow: 2px 2px 0px blue,-2px -2px 0px red;
+    filter: blur(80px);
+}
+@keyframes colorBall{
+    0%,100%{
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        background-position: 1800px;
+    }
+    15%,85%{
+        border-radius: 28% 72% 18% 82% / 59% 33% 67% 41%;
+    }
+    25%,75%{
+        border-radius: 60% 40% 70% 30% / 30% 49% 51% 70%;
+    }
+    50%{
+        border-radius: 60% 40% 70% 30% / 59% 33% 67% 41%;
+        background-position: 0px;
+    }
+}
+#login{
+    width: 400px;
+    height: 250px;
+    background-color: rgba(128, 128, 128, 0.538);
+    position: absolute;
+    left: 38%;
+    top: 34%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+h4{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 2px black;
+}
+input{
+    width: 80%;
+    height: 25px;
+    position: relative;
+    left: 9%;
+    top: 10%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    font-weight: bold;
+}
+#button{
+    left: 25%;
+    background-color:orangered;
+    color: white;
+    width: 200px;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+}
+#button:hover{
+    animation:buttonAnimation 0.5s;
+}
+@keyframes buttonAnimation{
+    0%,100%{
+        transform:skewY(12deg);
+    }
+    25%,75%{
+        transform:  skewY(-12deg);
+    }
+    50%{
+        transform: skewX(0deg) skewY(0deg);
+    }
+}
